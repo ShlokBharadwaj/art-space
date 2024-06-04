@@ -1,48 +1,24 @@
-import React from 'react'
+import React from 'react';
 
 const Sidebar = () => {
     return (
-        <div className="w-1/5 bg-white shadow p-4">
-            <ul className="space-y-4">
-                <li className="flex items-center space-x-2">
-                    <i className="fas fa-home"></i>
-                    <span>Home</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                    <i className="fas fa-bell"></i>
-                    <span>Notifications</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                    <i className="fas fa-store"></i>
-                    <span>Shop</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                    <i className="fas fa-comments"></i>
-                    <span>Conversation</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                    <i className="fas fa-wallet"></i>
-                    <span>Wallet</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                    <i className="fas fa-file-invoice"></i>
-                    <span>Subscription</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                    <i className="fas fa-user"></i>
-                    <span>My Profile</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                    <i className="fas fa-cog"></i>
-                    <span>Settings</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                    <i className="fas fa-sign-out-alt"></i>
-                    <span>Log out</span>
-                </li>
-            </ul>
+        <div className="w-64 bg-gray-100 min-h-screen p-5">
+            <div className="text-2xl font-bold mb-10 bg-white rounded-md p-5">LOGO</div>
+            <div className="bg-white p-4 rounded-md">
+                <ul>
+                    <li className="mb-4">Home</li>
+                    <li className="mb-4">Notifications</li>
+                    <li className="mb-4">Shop</li>
+                    <li className="mb-4">Conversation</li>
+                    <li className="mb-4">Wallet</li>
+                    <li className="mb-4">Subscription</li>
+                    <li className="mb-4">My Profile</li>
+                    <li className="mb-4">Settings</li>
+                </ul>
+                <button className="mt-auto text-teal-500">Log out</button>
+            </div>
         </div>
-    )
-}
+    );
+};
 
-export default Sidebar
+export default Sidebar;

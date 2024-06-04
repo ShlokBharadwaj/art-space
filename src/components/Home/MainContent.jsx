@@ -1,42 +1,46 @@
 import React from 'react';
-import Post from '../Post';
 
 const MainContent = () => {
     return (
-        <div className="flex-1 bg-gray-50 p-4">
-            <Post
-                username="Lara Leones"
-                imageUrl="/path/to/image1.jpg"
-                likes="9.8k"
-                comments="8.6k"
-                shares="7.2k"
-            />
-            <Post
-                username="Thomas J."
-                imageUrl="/path/to/image2.jpg"
-                likes="9.8k"
-                comments="8.6k"
-                shares="7.2k"
-            />
-            <div className="flex space-x-4 mt-6">
-                <div className="bg-white shadow p-4 rounded-lg">
-                    <img src="/path/to/image3.jpg" alt="Artwork" className="w-full rounded-lg" />
-                    <p className="mt-2 text-xl font-bold">$199.99</p>
-                    <p className="mt-1 text-yellow-500">★★★★★</p>
+        <div className="flex-1 p-5">
+            <div className="flex flex-col gap-4">
+                {/* Post 1 */}
+                <div className="bg-white p-4 rounded-lg shadow-md">
+                    <div className="flex items-center mb-2">
+                        <div className="w-10 h-10 bg-gray-300 rounded-full"></div>
+                        <div className="ml-2">
+                            <div className="font-semibold">Lara Leones</div>
+                            <div className="text-sm text-gray-500">@thewallart</div>
+                        </div>
+                    </div>
+                    <div className="mb-2">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. <span className="text-blue-500 cursor-pointer">Read More</span></div>
+                    <div className="w-full h-60 bg-gray-200 rounded-lg"></div>
+                    <div className="flex justify-between mt-2 text-gray-500">
+                        <div>9.8k</div>
+                        <div>8.6k</div>
+                        <div>7.2k</div>
+                    </div>
                 </div>
-                <div className="bg-white shadow p-4 rounded-lg">
-                    <img src="/path/to/image4.jpg" alt="Artwork" className="w-full rounded-lg" />
-                    <p className="mt-2 text-xl font-bold">$199.99</p>
-                    <p className="mt-1 text-yellow-500">★★★★★</p>
-                </div>
-                <div className="bg-white shadow p-4 rounded-lg">
-                    <img src="/path/to/image5.jpg" alt="Artwork" className="w-full rounded-lg" />
-                    <p className="mt-2 text-xl font-bold">$199.99</p>
-                    <p className="mt-1 text-yellow-500">★★★★★</p>
+                {/* Post 2 */}
+                <div className="bg-white p-4 rounded-lg shadow-md">
+                    <div className="flex items-center mb-2">
+                        <div className="w-10 h-10 bg-gray-300 rounded-full"></div>
+                        <div className="ml-2">
+                            <div className="font-semibold">Thomas J.</div>
+                            <div className="text-sm text-gray-500">@thecustomcreator</div>
+                        </div>
+                    </div>
+                    <div className="mb-2">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. <span className="text-blue-500 cursor-pointer">Read More</span></div>
+                    <div className="w-full h-60 bg-gray-200 rounded-lg"></div>
+                    <div className="flex justify-between mt-2 text-gray-500">
+                        <div>9.8k</div>
+                        <div>8.6k</div>
+                        <div>7.2k</div>
+                    </div>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default MainContent
+export default MainContent;
