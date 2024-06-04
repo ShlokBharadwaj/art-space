@@ -15,15 +15,19 @@ const Register = () => {
         e.preventDefault();
 
         if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+            console.log('Passwords do not match');
             return setError('Passwords do not match');
         }
 
         try {
             setError('');
             setLoading(true);
+            console.log('Signing up with email:', emailRef.current.value);
             await signup(emailRef.current.value, passwordRef.current.value);
-            navigate.push('/');
-        } catch {
+            console.log('Signup successful, navigating to home');
+            navigate('/');
+        } catch (err) {
+            console.log('Signup failed:', err);
             setError('Failed to create an account');
         }
 

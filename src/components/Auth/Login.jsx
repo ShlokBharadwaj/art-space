@@ -16,9 +16,12 @@ const Login = () => {
         try {
             setError('');
             setLoading(true);
+            console.log('Logging in with email:', emailRef.current.value);
             await login(emailRef.current.value, passwordRef.current.value);
-            navigate.push('/');
-        } catch {
+            console.log('Login successful, navigating to home');
+            navigate('/');
+        } catch (err) {
+            console.log('Login failed:', err);
             setError('Failed to log in');
         }
 
