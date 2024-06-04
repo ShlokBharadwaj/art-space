@@ -1,46 +1,37 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
-import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from 'firebase/auth';
-import { initializeApp } from 'firebase/app';
+import React, { useContext, useState, useEffect } from 'react';
+import { auth } from "../utils/firebase";
 
-const firebaseConfig = {
-    apiKey: import.meta.env.VITE_API_KEY,
-    authDomain: import.meta.env.VITE_AUTH_DOMAIN,
-    projectId: import.meta.env.VITE_PROJECT_ID,
-    storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
-    messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
-    appId: import.meta.env.VITE_APP_ID
-};
-
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-
-const AuthContext = createContext();
+const AuthContext = React.createContext();
 
 export function useAuth() {
     return useContext(AuthContext);
 }
 
+
 export function AuthProvider({ children }) {
     const [currentUser, setCurrentUser] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    function signup(email, password) {
+        return auth.createUserWithEmailAndPassword(email, password);
+    }
+
+    function login(email, password) {
+        return auth.signInWithEmailAndPassword(email, password);
+    }
+
+    function logout() {
+        return auth.signOut();
+    }
 
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, user => {
+        const unsubscribe = auth.onAuthStateChanged(user => {
             setCurrentUser(user);
+            setLoading(false);
         });
+
         return unsubscribe;
     }, []);
-
-    const login = (email, password) => {
-        return signInWithEmailAndPassword(auth, email, password);
-    };
-
-    const signup = (email, password) => {
-        return createUserWithEmailAndPassword(auth, email, password);
-    };
-
-    const logout = () => {
-        return signOut(auth);
-    };
 
     const value = {
         currentUser,
@@ -51,7 +42,7 @@ export function AuthProvider({ children }) {
 
     return (
         <AuthContext.Provider value={value}>
-            {children}
+            {!loading && children}
         </AuthContext.Provider>
     );
 }

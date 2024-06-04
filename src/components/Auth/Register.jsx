@@ -1,38 +1,60 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
-function Register() {
+const Register = () => {
     const emailRef = useRef();
     const passwordRef = useRef();
+    const passwordConfirmRef = useRef();
     const { signup } = useAuth();
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
+    const navigate = useNavigate();
 
-    const handleSubmit = async (e) => {
+    async function handleSubmit(e) {
         e.preventDefault();
-        try {
-            await signup(emailRef.current.value, passwordRef.current.value);
-        } catch {
-            alert("Failed to create an account");
+
+        if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+            return setError('Passwords do not match');
         }
-    };
+
+        try {
+            setError('');
+            setLoading(true);
+            await signup(emailRef.current.value, passwordRef.current.value);
+            navigate.push('/');
+        } catch {
+            setError('Failed to create an account');
+        }
+
+        setLoading(false);
+    }
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-100">
-            <div className="w-full max-w-md p-8 space-y-6 bg-white rounded shadow-md">
-                <h2 className="text-2xl font-bold">Sign Up</h2>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
+        <div className="flex justify-center items-center min-h-screen bg-gray-100">
+            <div className="w-full max-w-md p-8 space-y-3 bg-white rounded-lg shadow-md">
+                <h1 className="text-2xl font-bold text-center">Sign Up</h1>
+                {error && <div className="p-2 bg-red-500 text-white rounded">{error}</div>}
+                <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="flex flex-col space-y-1">
                         <label>Email</label>
-                        <input type="email" ref={emailRef} required className="w-full px-3 py-2 border rounded" />
+                        <input type="email" ref={emailRef} required className="border rounded px-3 py-2" />
                     </div>
-                    <div>
+                    <div className="flex flex-col space-y-1">
                         <label>Password</label>
-                        <input type="password" ref={passwordRef} required className="w-full px-3 py-2 border rounded" />
+                        <input type="password" ref={passwordRef} required className="border rounded px-3 py-2" />
                     </div>
-                    <button type="submit" className="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-600">Sign Up</button>
+                    <div className="flex flex-col space-y-1">
+                        <label>Password Confirmation</label>
+                        <input type="password" ref={passwordConfirmRef} required className="border rounded px-3 py-2" />
+                    </div>
+                    <button disabled={loading} type="submit" className="w-full bg-teal-500 text-white py-2 rounded hover:bg-teal-600">
+                        Sign Up
+                    </button>
                 </form>
             </div>
         </div>
     );
 }
 
-export default Register;
+export default Register
