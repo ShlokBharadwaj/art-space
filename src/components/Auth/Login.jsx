@@ -22,7 +22,20 @@ const Login = () => {
             navigate('/');
         } catch (err) {
             console.log('Login failed:', err);
-            setError('Failed to log in');
+            switch (err.code) {
+                case 'auth/invalid-credential':
+                    setError('Invalid Credentials');
+                    break;
+                case 'auth/user-disabled':
+                    setError('This user has been disabled');
+                    break;
+                case 'auth/user-not-found':
+                    setError('User not found');
+                    break;
+                default:
+                    setError('Failed to log in');
+                    break;
+            }
         }
 
         setLoading(false);

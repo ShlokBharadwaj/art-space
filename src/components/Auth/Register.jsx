@@ -28,7 +28,23 @@ const Register = () => {
             navigate('/');
         } catch (err) {
             console.log('Signup failed:', err);
-            setError('Failed to create an account');
+            switch (err.code) {
+                case 'auth/email-already-in-use':
+                    setError('Email already in use');
+                    break;
+                case 'auth/invalid-email':
+                    setError('Invalid email format');
+                    break;
+                case 'auth/operation-not-allowed':
+                    setError('Signup not currently available');
+                    break;
+                case 'auth/weak-password':
+                    setError('Password is too weak');
+                    break;
+                default:
+                    setError('Failed to create an account');
+                    break;
+            }
         }
 
         setLoading(false);
