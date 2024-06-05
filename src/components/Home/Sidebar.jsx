@@ -3,10 +3,10 @@ import React from 'react';
 const Sidebar = () => {
     return (
         <div className="w-64 bg-gray-50 min-h-screen p-5 text-left">
-            <div className="text-2xl font-bold mb-10 bg-white rounded-md p-5 flex justify-center items-center">LOGO</div>
+            <div className="text-2xl font-bold mb-10 bg-white rounded-md p-5 flex justify-center items-center shadow-md">LOGO</div>
             <div className="relative">
                 <div className="absolute left-0 top-4 w-1 h-7 bg-[#88C2BB]"></div>
-                <div className="bg-white p-4 rounded-md min-h-[75vh] flex flex-col pl-3">
+                <div className="bg-white p-4 rounded-md min-h-[75vh] flex flex-col pl-3 shadow-md">
                     <ul className="mb-auto space-y-4">
                         <li className="flex items-center font-bold">
                             <img src="./svgs/sidebar/home.svg" alt="Home" className="mr-2" />

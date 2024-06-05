@@ -3,7 +3,7 @@ import React from 'react';
 const ArtistsSidebar = () => {
     return (
         <div className="w-64 bg-gray-50 p-5 min-h-screen">
-            <button className="w-full bg-[#88C2BB] text-white p-5 rounded-md mb-10">Become a Seller</button>
+            <button className="w-full bg-[#88C2BB] text-white p-5 rounded-md mb-10 shadow-md">Become a Seller</button>
             <div className="mb-4">
                 <div className="font-semibold mb-2">Artists</div>
                 <ul>

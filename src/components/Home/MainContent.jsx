@@ -1,4 +1,5 @@
 import React from 'react';
+// import './MainContent.css';
 
 const MainContent = () => {
     return (
@@ -85,12 +86,64 @@ const MainContent = () => {
 
             {/* Horizontal Scrollbar */}
             <div className="flex overflow-x-auto py-4 space-x-4">
-                <img src="./svgs/maincontent/pexels-humphrey-muleba-2045248.png" alt="Image 3" className="w-48 h-32 object-cover rounded-lg" />
-                <img src="./svgs/maincontent/pexels-tobias-bjørkli-2236382.png" alt="Image 4" className="w-48 h-32 object-cover rounded-lg" />
-                <img src="./svgs/maincontent/pexels-humphrey-muleba-2045248.png" alt="Image 3" className="w-48 h-32 object-cover rounded-lg" />
-                <img src="./svgs/maincontent/pexels-tobias-bjørkli-2236382.png" alt="Image 4" className="w-48 h-32 object-cover rounded-lg" />
+                <div className="max-w-60 flex-shrink-0">
+                    <img src="./svgs/maincontent/pexels-pixabay-164455.png" alt="Image 3" className="h-36 object-cover rounded-lg" />
+                    <h4 className="text-xs font-bold mt-2">Modern Wall Decor Framed Painting</h4>
+                    <div className="flex justify-between items-center mt-2">
+                        <span className="text-lg font-bold">$199.90</span>
+                        <div className="flex">
+                            <img src="./svgs/maincontent/star.svg" alt="Rating" />
+                            <img src="./svgs/maincontent/star.svg" alt="Rating" />
+                            <img src="./svgs/maincontent/star.svg" alt="Rating" />
+                            <img src="./svgs/maincontent/star.svg" alt="Rating" />
+                            <img src="./svgs/maincontent/star.svg" alt="Rating" />
+                        </div>
+                    </div>
+                </div>
+                <div className="max-w-60 flex-shrink-0">
+                    <img src="./svgs/maincontent/Image40.png" alt="Image 3" className="h-36 object-cover rounded-lg" />
+                    <h4 className="text-xs font-bold mt-2">Modern Wall Decor Framed Painting</h4>
+                    <div className="flex justify-between items-center mt-2">
+                        <span className="text-lg font-bold">$199.90</span>
+                        <div className="flex">
+                            <img src="./svgs/maincontent/star.svg" alt="Rating" />
+                            <img src="./svgs/maincontent/star.svg" alt="Rating" />
+                            <img src="./svgs/maincontent/star.svg" alt="Rating" />
+                            <img src="./svgs/maincontent/star.svg" alt="Rating" />
+                            <img src="./svgs/maincontent/star.svg" alt="Rating" />
+                        </div>
+                    </div>
+                </div>
+                <div className="max-w-60 flex-shrink-0">
+                    <img src="./svgs/maincontent/Image39@2x.png" alt="Image 3" className="w-full h-36 object-cover rounded-lg" />
+                    <h4 className="text-xs font-bold mt-2">Modern Wall Decor Framed Painting</h4>
+                    <div className="flex justify-between items-center mt-2">
+                        <span className="text-lg font-bold">$199.90</span>
+                        <div className="flex">
+                            <img src="./svgs/maincontent/star.svg" alt="Rating" />
+                            <img src="./svgs/maincontent/star.svg" alt="Rating" />
+                            <img src="./svgs/maincontent/star.svg" alt="Rating" />
+                            <img src="./svgs/maincontent/star.svg" alt="Rating" />
+                            <img src="./svgs/maincontent/star.svg" alt="Rating" />
+                        </div>
+                    </div>
+                </div>
+                <div className="max-w-60 flex-shrink-0">
+                    <img src="./svgs/maincontent/pexels-max-vakhtbovych-6782342.png" alt="Image 3" className="h-36 object-cover rounded-lg" />
+                    <h4 className="text-xs font-bold mt-2">Modern Wall Decor Framed Painting</h4>
+                    <div className="flex justify-between items-center mt-2">
+                        <span className="text-lg font-bold">$199.90</span>
+                        <div className="flex">
+                            <img src="./svgs/maincontent/star.svg" alt="Rating" />
+                            <img src="./svgs/maincontent/star.svg" alt="Rating" />
+                            <img src="./svgs/maincontent/star.svg" alt="Rating" />
+                            <img src="./svgs/maincontent/star.svg" alt="Rating" />
+                            <img src="./svgs/maincontent/star.svg" alt="Rating" />
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </div >
     );
 };
 
