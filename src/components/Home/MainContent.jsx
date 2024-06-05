@@ -82,6 +82,14 @@ const MainContent = () => {
                     <div><img src="./svgs/maincontent/share.svg" className="w-6 h-6"></img> 7.2k</div>
                 </div>
             </div>
+
+            {/* Horizontal Scrollbar */}
+            <div className="flex overflow-x-auto py-4 space-x-4">
+                <img src="./svgs/maincontent/pexels-humphrey-muleba-2045248.png" alt="Image 3" className="w-48 h-32 object-cover rounded-lg" />
+                <img src="./svgs/maincontent/pexels-tobias-bjørkli-2236382.png" alt="Image 4" className="w-48 h-32 object-cover rounded-lg" />
+                <img src="./svgs/maincontent/pexels-humphrey-muleba-2045248.png" alt="Image 3" className="w-48 h-32 object-cover rounded-lg" />
+                <img src="./svgs/maincontent/pexels-tobias-bjørkli-2236382.png" alt="Image 4" className="w-48 h-32 object-cover rounded-lg" />
+            </div>
         </div>
     );
 };
