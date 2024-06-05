@@ -43,7 +43,7 @@ const MainContent = () => {
                     <img src="./svgs/maincontent/pexels-humphrey-muleba-2045248.png" alt="Post" className="w-full h-60 object-cover rounded-lg mb-2" />
                     <img src="./svgs/maincontent/heart.svg" className="w-6 h-6 absolute top-4 right-4" />
                 </div>
-                <div className="flex flex-col border-2 border-b border-gray-300" />
+                <div className="border-b-2 border-gray-300 -mx-4" /> {/* Full width border */}
                 <div className="flex justify-start space-x-8 mt-5 ml-5 text-black font-bold">
                     <div><img src="./svgs/maincontent/heart-1.svg" className="w-6 h-6"></img> 9.8k</div>
                     <div><img src="./svgs/maincontent/comment.svg" className="w-6 h-6"></img> 8.6k</div>
@@ -75,7 +75,7 @@ const MainContent = () => {
                     <img src="./svgs/maincontent/pexels-tobias-bjørkli-2236382.png" alt="Post" className="w-full h-60 object-cover rounded-lg mb-2" />
                     <img src="./svgs/maincontent/heart.svg" className="w-6 h-6 absolute top-4 right-4" />
                 </div>
-                <div className="flex flex-col border-2 border-b border-gray-300" />
+                <div className="border-b-2 border-gray-300 -mx-4" /> {/* Full width border */}
                 <div className="flex justify-start space-x-8 mt-5 ml-5 text-black font-bold">
                     <div><img src="./svgs/maincontent/heart-1.svg" className="w-6 h-6"></img> 9.8k</div>
                     <div><img src="./svgs/maincontent/comment.svg" className="w-6 h-6"></img> 8.6k</div>
