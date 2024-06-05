@@ -1,8 +1,39 @@
-# React + Vite
+# art-space
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Installing and Running
 
-Currently, two official plugins are available:
+1. Clone the repository:
+   ```
+   git clone git@github.com:ShlokBharadwaj/art-space.git
+   ```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. Install dependencies:
+   ```
+    npm i
+    ```
+3. Start the application:
+   ```
+   npm run dev
+   ```
+
+8. Open [http://localhost:5173](http://localhost:5173) to view the frontend in the browser.
+
+## Using the Application
+
+To run the application on your local machine, follow these steps:
+
+1. Go to the root directory and create a `.env` file.
+
+```
+touch .env
+```
+
+2. Navigate to `.env.example` and copy the contents to `.env`.
+
+```
+cp .env.example .env
+```
+
+3. Replace the values of the keys with your own values.
+
+*Hint*: _Follow the directions in the `.env.example` to know what values to change and where to find those values._
