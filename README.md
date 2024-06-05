@@ -37,3 +37,17 @@ cp .env.example .env
 3. Replace the values of the keys with your own values.
 
 *Hint*: _Follow the directions in the `.env.example` to know what values to change and where to find those values._
+
+## Screenshots
+
+### Adobe XD Design
+![alt text](/public/assets/image.png)
+
+### Developed Application
+![alt text](/public/assets/image-2.png)
+
+### Adobe XD Design
+![alt text](/public/assets/image-1.png)
+
+### Developed Application
+![alt text](/public/assets/image-3.png)
