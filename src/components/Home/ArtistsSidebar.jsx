@@ -5,7 +5,10 @@ const ArtistsSidebar = () => {
         <div className="w-64 bg-gray-50 p-5 min-h-screen">
             <button className="w-full bg-[#88C2BB] text-white p-5 rounded-md mb-10 shadow-md">Become a Seller</button>
             <div className="mb-4">
-                <div className="font-semibold mb-2">Artists</div>
+                <div className="flex justify-start mb-2">
+                    <div className="font-semibold text-sm">Artists</div>
+                    <div className="font-normal ml-2 text-[#8D8D8D] text-sm">Photographers</div>
+                </div>
                 <ul>
                     <li className="relative mb-2">
                         <img src="./svgs/artistssidebar/pexels-ekaterina-12203460.png" alt="John Smith" className="w-full" />
